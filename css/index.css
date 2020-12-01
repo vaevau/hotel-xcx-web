@@ -1,0 +1,154 @@
+/* 格式化 */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 20px;
+}
+ul, li, a, img {
+    list-style: none;
+    text-decoration: none;
+}
+ /* @media screen and (max-width: 375px) {
+     html {
+         font-size: 10px;
+     }
+ }
+ @media screen and (min-width: 414px) {
+    html {
+        font-size: 11px;
+    }
+} */
+/* 头部固定导航栏 */
+#nav-fixed {
+    width: 37.5rem;
+    /* height: 37.5rem; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    /* background: url(../img/theme.png) no-repeat;
+    background-size: 100% 100%; */
+    z-index: 1000;
+    font-size: 16px;
+}
+#nav-fixed div {
+    
+}
+.search-top, .filter-menu, .filter-tag {
+    width: 75%;
+    margin: auto;
+}
+.search-top ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.hotel-date-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    border-radius: 0.2rem;
+    padding:0 0.5rem;
+}
+.hotel-date-msg span:nth-child(2) {  
+    padding-left: 0.5rem;
+}
+
+
+.search-hotel-input {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px 1px #f5f5f5;
+    border: 1px solid #f5f5f5;
+    margin-left: 20px;
+}
+.search-hotel-input div {
+   padding-left: 0.5rem;
+}
+.search-hotel-input label {
+    font-size: 0.6rem;
+    position: relative;
+    
+}
+
+.search-hotel-input label:after {
+    content: "";
+    width: 0.05rem;
+    height: 0.8rem;
+    background-color:#ccc;
+    line-height: 1rem;
+    position: absolute;
+    top: -0.1rem;
+    left: 1.7rem;
+    
+}
+.search-hotel-input input {
+    outline: none;
+    background: none;
+    overflow: hidden;
+    border: none;
+    color: #ccc;
+    font-size: 0.7rem;
+    padding-left: 1.8rem;
+    padding-right: 4rem;
+    flex:1 1 1rem;
+}
+.ico-serch {
+    position: absolute;
+    top: 1.15rem;
+    padding: 1rem;
+    background: url(../img/ico-seach.png) no-repeat;
+    background-size: 1rem 1rem;
+    margin-left: 0.7rem;
+}
+.ico-cancel {
+    position: relative;
+    padding: 1rem;
+    top: 1.1rem;
+    background: url(../img/ico-cancel.png) no-repeat;
+    background-size: 0.8rem 0.8rem;
+    margin-left: 0.5rem;
+
+}
+.ico-map {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.6rem;
+    background: url(../img/ico-map.png) no-repeat;
+    background-size: 70% 70%;
+    position: relative;
+    margin-left: 30px;
+}
+.ico-map span {
+    position: absolute;
+    top: 1rem;
+}
+
+
+
+.filter-menu ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    
+}
+.filter-menu li {
+    
+}
+
+
+
+.filter-tag ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+  
+}
