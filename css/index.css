@@ -125,9 +125,9 @@ ul, li, a, img {
 /* 条件筛选 */
 .filter-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 0.9rem;
-    margin-left: -0.5rem;
+    margin-left: -2rem;
     margin-top: 1rem;
     text-align: center;
 }
