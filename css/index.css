@@ -107,7 +107,7 @@ ul, li, a, img {
     background: url(../img/ico-cancel.png) no-repeat;
     background-size:100% 100%;
     cursor: pointer;
-    margin-left: 12rem;
+    margin-left: 10rem;
 
 }
 .ico-map {
@@ -116,14 +116,13 @@ ul, li, a, img {
     font-size: 0.6rem;
     background: url(../img/ico-map.png) no-repeat;
     background-size: 40% 70%;
-    margin-left: 1rem;
-    min-width: 3rem;
-
+    padding-left: 1rem;
+    min-width: 2rem;
 }
 .ico-map span {
     position: relative;
     top: 1.2rem;
-    left: -0.05rem;
+    left: -1rem;
 }
 
 /* 条件筛选 */
@@ -135,7 +134,6 @@ ul, li, a, img {
     margin-left: -2.6rem;
 }
 .filter-menu li {
-
     padding: 1rem;
     width: 12%;
     min-width: 14%;
