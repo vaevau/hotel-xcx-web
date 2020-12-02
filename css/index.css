@@ -23,40 +23,42 @@ ul, li, a, img {
 /* 头部固定导航栏 */
 #nav-fixed {
     width: 37.5rem;
-    /* height: 37.5rem; */
+    overflow: hidden;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     margin: 0 auto;
-    /* background: url(../img/theme.png) no-repeat;
-    background-size: 100% 100%; */
     z-index: 1000;
     font-size: 16px;
     background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
-#nav-fixed div {
-    
-}
-.search-top, .filter-menu, .filter-tag {
-    width: 80%;
-    margin: auto;
-}
-/* 酒店搜索框 */
-.search-top ul {
+#nav-fixed ul {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items:center; 
+}
+
+
+.search-top, .filter-menu, .filter-tag, .rcmd-hotel, .no-data-msg {
+    width: 100%;
+    margin:0 auto;
+    overflow: hidden;
+}
+/* 酒店搜索框 */
+.search-top  {
+    margin-left: -1.2rem;
 }
 
 .hotel-date-msg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #f5f5f5;
-    font-size: 12px;
+    font-size: 0.6rem;
     border-radius: 0.2rem;
     padding:0 0.5rem;
+    flex-basis: 8%;
 }
 .hotel-date-msg span:nth-child(2) {  
     padding-left: 0.5rem;
@@ -70,15 +72,15 @@ ul, li, a, img {
     border-radius: 4px;
     box-shadow: 1px 1px 2px 1px #f5f5f5;
     border: 1px solid #f5f5f5;
-    margin-left: 0.2rem;
+    flex-basis: 80%;
+    flex-shrink: 1;
 }
 .search-hotel-input div {
    padding-left: 0.5rem;
 }
 .search-hotel-input label {
     font-size: 0.6rem;
-    position: relative;
-    
+    position: relative;   
 }
 
 .search-hotel-input label:after {
@@ -99,13 +101,11 @@ ul, li, a, img {
     border: none;
     color: #ccc;
     font-size: 0.7rem;
-    padding-left: 1.8rem;
-    padding-right: 4rem;
-    flex:1 1 1rem;
+    padding: 0 4rem 0 2rem;
 }
 .ico-serch {
     position: absolute;
-    top: 1.15rem;
+    top: 1.2rem;
     padding: 1rem;
     background: url(../img/ico-seach.png) no-repeat;
     background-size: 1rem 1rem;
@@ -115,10 +115,10 @@ ul, li, a, img {
     position: relative;
     padding: 1rem;
     top: 1.1rem;
-    left: 0.8rem;
+    left: 42%;
     background: url(../img/ico-cancel.png) no-repeat;
     background-size: 0.8rem 0.8rem;
-    margin-left: 1rem;
+    cursor: pointer;
 
 }
 .ico-map {
@@ -128,50 +128,41 @@ ul, li, a, img {
     background: url(../img/ico-map.png) no-repeat;
     background-size: 70% 70%;
     position: relative;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
 .ico-map span {
     position: absolute;
     top: 1rem;
-
-}
-
-
-
-.filter-menu {
-    
-    
 }
 
 
 /* 条件筛选 */
-.filter-menu ul {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
 
+.filter-menu {
+    margin-top: -1rem;
+}
+.filter-menu ul {
+    font-size: 0.7rem;
+    margin-left: -2rem;
 }
 .filter-menu li {
     background: url(../img/ico-arrow-down.png) no-repeat 4rem 1.3rem;
-    background-size: 15% 15%;
+    background-size: 12% 12%;
     padding: 1rem;
+    flex-basis: 11%;
+    flex-shrink: 1;
 }
 
 
 /* 地域标签 */
 .filter-tag {
-    background: #f5f5f5;
-    padding: 0.005rem 0.8rem;
+    background: #f5f5f5;  
     border-radius: 0.2rem;
-    width: 80%;
-
+    padding: 0 0.8rem 0 0.2rem;
 }
 .filter-tag ul {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
     font-size: 0.7rem;
-    margin-left: -1rem;
+    margin-left: -1.6rem;
 }
 
 .filter-tag ul li{
@@ -191,8 +182,7 @@ ul, li, a, img {
 }
 
 .rcmd-hotel {
-    width: 80%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     background: url(../img/bg-rcmd-hotel.png) no-repeat;
     background-size: 100% 100%;
     border: 1px solid #fff;
@@ -203,7 +193,7 @@ ul, li, a, img {
     justify-content: space-between;
 
 }
-.rcmd-hotel p {
+.rcmd-hotel-title p {
     font-size: 1rem;
     position: relative;
     top: 1rem;
@@ -225,25 +215,21 @@ ul, li, a, img {
     background: #fff;
     margin: 1rem auto;
     border-radius: 0.2rem;
-}
-.hotel-msg ul {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
+
 
 .hotel-msg div {
     font-size: 0.6rem;
 }
-.hotel-msg div ul {
-    margin-top: 1rem;
-}
-.hotel-msg p {
-    font-size: 0.8rem;
-}
+
+
 
 .pic-hotel {
     width: 30%;
-    margin-left: -1.8rem;
+    margin-left: 0.2rem;
     padding: 0.2rem 0;
     display: flex;
     align-items: center;
@@ -254,52 +240,45 @@ ul, li, a, img {
 }
 
 .hotel-content {
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    position: relative;
+    margin: 0.5rem 0 0 0.5rem;  
 }
+
 /* 酒店评价 */
 .review {
     background-color:#f5f5f5;
     border-radius: 0.2rem;
     color: purple;
-    padding: 0.1rem 1.5rem;
+    overflow: hidden;
+    width: 80%;
+    padding: 0.2rem 0.5rem 0.2rem 1.8rem;
     position: relative;
-    height: 1rem;
-    line-height: 1rem;
     margin: 0.5rem 0;
+    
+    display:flex;
+    align-items: center;
 }
-.review img {
+.review span {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url(../img/icon-support.png) no-repeat;
+    background-size:cover;
     position: absolute;
-    left: 0.2rem;
-    top: 0.15rem;
-    width: 6%;
-}
-
-.hotel-content ul {
-    margin-left: -2.5rem;
-    display: flex;
-    justify-content: flex-start;
+    left: 0.4rem;
 }
 
 .hotel-content div:nth-child(1) {
     font-size: 0.9rem;
 }
-.hotel-content span {
-    margin-left: 0.3rem;
-}
-.hotel-content ul li {
-    margin-left: 0.7rem;
-}
 
 
 /* 酒店价格 */
 .hotel-price {
-    margin-left: 3.2rem;
-    margin-top: 4rem;
+    margin: 4rem 0 0 4rem;
     bottom: 1.6rem;
-    right: 5rem;
     color: red;
+    font-size: 0.9rem !important;
+    display: flex;
+    align-items: center;
 }
 .hotel-price span {
     color: #ccc;
@@ -311,10 +290,7 @@ ul, li, a, img {
 
 /* 酒店不存在提示信息 */
 .no-data-msg {
-    width: 80%;
-    margin: 0 auto;
     text-align: center;
-    padding: 2rem;
 }
 
 .pic-no-data {
@@ -330,9 +306,8 @@ ul, li, a, img {
 }
 
 .btn-find-hotel {
-    background: url(../img/bg-btn.png) no-repeat 1.9rem 1.4rem;
-    width: 50%;
-    margin: 0rem auto;
+    background: url(../img/bg-btn.png) no-repeat 12.9rem 1.4rem;
     padding: 2rem 0.2rem;
-
+    background-size: 100% 100% contain;
+    cursor: pointer;
 }
