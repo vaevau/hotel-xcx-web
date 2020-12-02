@@ -115,8 +115,9 @@ ul, li, a, img {
     height: 1.6rem;
     font-size: 0.6rem;
     background: url(../img/ico-map.png) no-repeat;
-    background-size: 70% 70%;
+    background-size: 60% 70%;
     margin-left: 1rem;
+    min-width: 2rem;
 }
 .ico-map span {
     position: relative;
@@ -134,15 +135,15 @@ ul, li, a, img {
 }
 .filter-menu li {
 
-    padding: 2rem;
-    min-width: 15%;
+    padding: 1rem;
 }
 
 .filter-menu span {
-    width: 1rem;
+    width: 1.2rem;
     height: 0.5rem;
     background: url(../img/ico-arrow-down.png) no-repeat 0.2rem 0;
     display: inline-block;
+    background-size: 50% 100%;
 }
 
 
