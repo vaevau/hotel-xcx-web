@@ -115,9 +115,10 @@ ul, li, a, img {
     height: 1.6rem;
     font-size: 0.6rem;
     background: url(../img/ico-map.png) no-repeat;
-    background-size: 60% 70%;
+    background-size: 40% 70%;
     margin-left: 1rem;
-    min-width: 2rem;
+    min-width: 3rem;
+
 }
 .ico-map span {
     position: relative;
@@ -136,6 +137,9 @@ ul, li, a, img {
 .filter-menu li {
 
     padding: 1rem;
+    border: 1px solid red;
+    width: 12%;
+    min-width: 14%;
 }
 
 .filter-menu span {
