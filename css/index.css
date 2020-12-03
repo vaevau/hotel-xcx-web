@@ -155,9 +155,10 @@ ul, li, a, img {
     font-size: 0.7rem;
     position: absolute;
     box-sizing: border-box;
+    display: none;
 }
 .sort-distance {
-    display: none;
+
 }
 .list-cont {
     width: 100%;
@@ -222,7 +223,6 @@ ul, li, a, img {
     background: #fff;
     position: absolute;
     right: 0;
-    display: none;
 }
 
 .list-businese-circle div {
@@ -242,21 +242,17 @@ ul, li, a, img {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    display: none;
     background: #fff;
 }
 
 .list-train {
    width: 40%;
 }
-.list-train div {
-   
-}
 .list-train .selected-style {
     background-size: 6%;
     background-position: 13% 50%;
 }
-.list-train div, .palce-each-train div {
+.list-train div, .palce-each-train div, .name-administrative div{
     padding: 1rem 2.2rem;
     text-align: left;
     border-radius: 0.2rem;
@@ -267,8 +263,16 @@ ul, li, a, img {
 .palce-each-train .selected-style {
     background-size: 8%;
 }
+/* 行政区 */
+.list-administrative-blok {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    background: #fff;
+}
+.name-administrative div {
 
-
+}
 /* 地域标签 */
 .filter-tag {
     background: #f5f5f5;  
