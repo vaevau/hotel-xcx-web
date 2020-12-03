@@ -162,7 +162,7 @@ ul, li, a, img {
 }
 .list-cont {
     width: 100%;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
     padding-left: 0.8rem;
     display: flex;
 }
@@ -195,7 +195,7 @@ ul, li, a, img {
 /* 位置区域帅选 */
 .sort-place {
     width: 100%;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
     display: flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
@@ -243,6 +243,8 @@ ul, li, a, img {
     display: flex;
     justify-content: space-between;
     background: #fff;
+    border-top: 1px solid #f5f5f5;
+    display: none;
 }
 
 .list-train {
@@ -265,14 +267,17 @@ ul, li, a, img {
 }
 /* 行政区 */
 .list-administrative-blok {
+    width: 75%;
     position: absolute;
     left: 25%;
-    width: 75%;
+    top: 0;
     background: #fff;
+    border-top: 1px solid #f5f5f5;
+    display: none;
 }
-.name-administrative div {
+/* 重置和确认按钮 */
 
-}
+
 /* 地域标签 */
 .filter-tag {
     background: #f5f5f5;  
@@ -302,6 +307,7 @@ ul, li, a, img {
     flex-shrink: 0;
     margin-left: 3rem;
 }
+
 
 
 
