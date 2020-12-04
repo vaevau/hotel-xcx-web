@@ -117,17 +117,19 @@ ul, li, a, img {
   text-align: center; }
 
 .filter-menu div {
-  margin-left: 2rem; }
+  margin-left: 3.5rem;
+  cursor: pointer;
+  background: url(../img/ico-arrow-d.png) no-repeat 3.5rem -0.1rem;
+  padding-right: 2rem; }
+.filter-menu div:hover {
+  margin-left: 3.5rem;
+  background: url(../img/ico-arrow-up.png) no-repeat 3.5rem -0.1rem;
+  padding-right: 2rem;
+  color: darkcyan; }
 .filter-menu .active {
   color: darkcyan;
-  /* 默认激活颜色样式 */ }
-.filter-menu span {
-  width: 0.8rem;
-  height: 0.5rem;
-  background: url(../img/ico-arrow-down.png) no-repeat;
-  display: inline-block;
-  background-size: 100%;
-  margin-left: 0.1rem; }
+  /* 默认激活颜色样式 */
+  background: url(../img/ico-arrow-d.png) no-repeat 3.5rem -0.2rem; }
 
 /* 条件筛选隐藏内容最外层容器 */
 .sort-list-hide {
@@ -139,7 +141,7 @@ ul, li, a, img {
 /* 距离排序 */
 .sort-distance {
   background: #fff;
-  display: none; }
+  -display: none; }
 
 .sort-distance .list-cont {
   width: 100%;
@@ -176,11 +178,16 @@ ul, li, a, img {
   width: 25%;
   background: #f8f8f8;
   text-align: center;
-  border-left: 1px solid #f8f8f8; }
+  border-left: 1px solid #f8f8f8;
+  display: none; }
 
 .sort-place-detail div {
   padding: 1rem 3.2rem;
   font-size: 0.8rem; }
+.sort-place-detail div:hover {
+  color: darkcyan;
+  background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
+  background-size: 12% 34%; }
 .sort-place-detail .selected-style {
   background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
   background-size: 12% 34%; }
@@ -190,10 +197,13 @@ ul, li, a, img {
   display: none; }
 
 .list-businese-circle div {
-  padding: 1rem; }
-.list-businese-circle .selected-style {
+  padding: 1rem;
+  width: 24rem; }
+.list-businese-circle div:hover {
+  padding: 1rem;
   color: cadetblue;
-  background: none #fff; }
+  background: none #fff;
+  background: url(../img/ico-selected.png) #e1f2fa no-repeat 92% 50%; }
 
 /*  地铁线列表外层容器*/
 .content-train-selected {
@@ -202,8 +212,7 @@ ul, li, a, img {
   margin-top: -0.06rem;
   justify-content: flex-start;
   background: #fff;
-  border-top: 1px solid #f5f5f5;
-  display: none; }
+  border-top: 1px solid #f5f5f5; }
 
 .content-train-selected .list-train {
   width: 40%;
@@ -217,11 +226,14 @@ ul, li, a, img {
   text-align: left;
   border-radius: 0.2rem; }
 
-.list-train .selected-style {
+.list-train .selected-style, .list-train div:hover {
   background-size: 6%;
   background-position: 13% 50%; }
 
-.palce-each-train .selected-style {
+.palce-each-train .selected-style, .palce-each-train div:hover {
+  background-size: 8%;
+  color: darkcyan;
+  background: url(../img/ico-selected.png) #e1f2fa no-repeat 92% 50%;
   background-size: 8%; }
 
 /* 行政区 */
@@ -253,10 +265,11 @@ ul, li, a, img {
   border-radius: 0.2rem; }
 
 .black-bg {
-  background: #ccc;
+  background: rgba(0, 0, 0, 0.5);
   width: 37.5rem;
-  height: 20rem;
-  margin: 0rem auto; }
+  height: 100vh;
+  margin: 0rem auto;
+  position: fixed; }
 
 /* 地域标签 */
 .filter-tag {

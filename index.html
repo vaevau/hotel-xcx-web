@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>如家酒店</title>
-    <link rel="stylesheet" href="css/-index.css" />
+    <!-- <link rel="stylesheet" href="css/-index.css" /> -->
     <link rel="stylesheet" href="sass/index.css">
     <link rel="stylesheet" href="css/media.css" />
 </head>
@@ -27,19 +27,19 @@
                 <div class="ico-map"><span>地图</span></div>
             </div>
 
-            <div class="filter-menu">
-                    <div class="active">距离排序<span></span></div>
-                    <div>位置区域<span></span></div>
-                    <div>品牌价格<span></span></div>
-                    <div>其他筛选<span></span></div>
+            <div id="filter-menu" class="filter-menu">
+                    <div class="active">距离排序</div>
+                    <div>位置区域</div>
+                    <div>品牌价格</div>
+                    <div>其他筛选</div>
             </div>
                  <!--  隐藏内容/筛选条件--> 
             <div class="sort-list-hide">
-                <div class="sort-distance">
+                <div id="sort-distance" class="sort-distance">
                     <div class="list-cont">
                         <ul>
                             <li>排序推荐</li>
-                            <li class="selected-style">低价优先</li>
+                            <li class="-selected-style">低价优先</li>
                             <li>高价优先</li>
                             <li>评价优先</li>
                             <li>服务优先</li>
@@ -49,11 +49,9 @@
                 </div> 
                 
                 <!--  第一个隐藏链表 -->
-                <div class="sort-place">
- 
-
+                <div id="sort-place" class="sort-place">
                     <!-- 第二个隐藏列表-->
-                    <div class="sort-place-detail">
+                    <div id="sort-place-detail" class="sort-place-detail">
                         <div class="selected-style">商圈</div>
                         <div>地铁</div>
                         <div>行政区</div>
@@ -240,5 +238,16 @@
         </div>
     </div>
 
+    <!-- <div id="msk">
+        <div class="con1">
+            jsdjfsd 
+        </div>
+    </div> -->
+    <!-- <script src="js/index.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js">
+           $(document).ready(function(){
+               alert("aa");
+           });
+    </script>
 </body>
 </html>
