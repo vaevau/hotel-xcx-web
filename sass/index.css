@@ -1,0 +1,399 @@
+@charset "UTF-8";
+/* 格式化 */
+*, html, body, p, span, ul, li {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 20px; }
+
+ul, li, a, img {
+  list-style: none;
+  text-decoration: none; }
+
+/* 头部固定导航栏 */
+#nav-fixed {
+  width: 37.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1000;
+  font-size: 0.8rem;
+  background: #fff; }
+
+.search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-msg {
+  width: 100%;
+  margin: 0 auto; }
+
+/* 酒店搜索框外层容器 */
+.search-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1rem; }
+
+/* 左侧住离日期信息 */
+.hotel-date-msg {
+  background-color: #f5f5f5;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  min-width: 16%;
+  text-align: center;
+  padding: 0.2rem 0;
+  margin-left: -0.7rem; }
+
+.hotel-date-msg span:nth-child(2) {
+  padding-left: 0.5rem; }
+
+/* 搜索框 */
+.search-hotel-input {
+  background-color: #f5f5f5;
+  border-radius: 0.2rem;
+  border: 1px solid #f5f5f5;
+  margin-left: 0.8rem;
+  min-height: 1.2rem; }
+
+.search-hotel-input .search-container {
+  padding: 0.45rem 1rem 0.45rem 0;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem; }
+.search-hotel-input label {
+  font-size: 0.8rem;
+  position: relative;
+  width: 8%; }
+.search-hotel-input label:after {
+  content: "";
+  width: 0.05rem;
+  height: 0.8rem;
+  background-color: #a8a4a4;
+  line-height: 1rem;
+  position: absolute;
+  top: 0.09rem;
+  left: 2.2rem; }
+.search-hotel-input input {
+  outline: none;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 0.8rem; }
+
+/* 搜索框相关图标 与 右侧地图入口图标 */
+.search-top .ico-serch {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/ico-seach.png) no-repeat;
+  background-size: 90%;
+  margin-left: 1rem; }
+.search-top .ico-cancel {
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url(../img/ico-cancel.png) no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  margin-left: 10rem; }
+.search-top .ico-map {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.6rem;
+  background: url(../img/ico-map.png) no-repeat;
+  background-size: 60%;
+  min-width: 2rem;
+  margin-top: -0.4rem;
+  margin: auto; }
+.search-top .ico-map span {
+  position: relative;
+  top: 60%; }
+
+/* 条件筛选外层容器*/
+.filter-menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  margin: 1rem 0 0 -2rem;
+  text-align: center; }
+
+.filter-menu div {
+  margin-left: 2rem; }
+.filter-menu .active {
+  color: darkcyan;
+  /* 默认激活颜色样式 */ }
+.filter-menu span {
+  width: 0.8rem;
+  height: 0.5rem;
+  background: url(../img/ico-arrow-down.png) no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  margin-left: 0.1rem; }
+
+/* 条件筛选隐藏内容最外层容器 */
+.sort-list-hide {
+  width: 37.5rem;
+  margin: 1rem auto;
+  font-size: 0.7rem;
+  box-sizing: border-box; }
+
+/* 距离排序 */
+.sort-distance {
+  background: #fff;
+  display: none; }
+
+.sort-distance .list-cont {
+  width: 100%;
+  border-top: 1px solid #f5f5f5;
+  padding-left: 0.8rem;
+  display: flex; }
+.sort-distance li {
+  width: 100%;
+  padding: 1rem 16.5rem 1rem 0.4rem;
+  border-radius: 0.2rem;
+  cursor: pointer; }
+.sort-distance li:hover, .sort-distance .selected-style {
+  background: url(../img/ico-selected.png) #e1f2fa no-repeat 92% 50%;
+  padding: 1rem 16.5rem 1rem 0.4rem;
+  background-size: 6% 66%;
+  color: darkcyan; }
+
+.selected-style {
+  background: url(../img/ico-selected.png) #e1f2fa no-repeat 92% 50%;
+  padding: 1rem 16.5rem 1rem 0.4rem;
+  background-size: 6% 66%;
+  color: darkcyan; }
+
+/* 位置区域帅选外层容器 */
+.sort-place {
+  width: 100%;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  display: none; }
+
+.sort-place .sort-place-detail {
+  width: 25%;
+  background: #f8f8f8;
+  text-align: center;
+  border-left: 1px solid #f8f8f8; }
+
+.sort-place-detail div {
+  padding: 1rem 3.2rem;
+  font-size: 0.8rem; }
+.sort-place-detail .selected-style {
+  background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
+  background-size: 12% 34%; }
+
+.list-businese-circle {
+  background: #fff;
+  display: none; }
+
+.list-businese-circle div {
+  padding: 1rem; }
+.list-businese-circle .selected-style {
+  color: cadetblue;
+  background: none #fff; }
+
+/*  地铁线列表外层容器*/
+.content-train-selected {
+  display: flex;
+  width: 74%;
+  margin-top: -0.06rem;
+  justify-content: flex-start;
+  background: #fff;
+  border-top: 1px solid #f5f5f5;
+  display: none; }
+
+.content-train-selected .list-train {
+  width: 40%;
+  border: none; }
+.content-train-selected .palce-each-train {
+  width: 60%; }
+
+/*  地铁线列表*/
+.list-train div, .palce-each-train div, .name-administrative div {
+  padding: 1rem 2.2rem;
+  text-align: left;
+  border-radius: 0.2rem; }
+
+.list-train .selected-style {
+  background-size: 6%;
+  background-position: 13% 50%; }
+
+.palce-each-train .selected-style {
+  background-size: 8%; }
+
+/* 行政区 */
+.list-administrative-blok {
+  background: #fff;
+  border-top: 1px solid #f5f5f5;
+  display: none; }
+
+/* 重置和确认按钮 */
+.btn-reset-confirm {
+  border: 1px solid #f5f5f5;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #fff;
+  padding-right: 0.5rem; }
+
+.btn-reset-confirm .btn-reset {
+  width: 30%;
+  color: #000; }
+.btn-reset-confirm .btn-confirm {
+  width: 70%;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  background: #4b4be7;
+  border-radius: 0.2rem; }
+
+.black-bg {
+  background: #ccc;
+  width: 37.5rem;
+  height: 20rem;
+  margin: 0rem auto; }
+
+/* 地域标签 */
+.filter-tag {
+  width: 100%;
+  background: #f5f5f5;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  overflow: hidden; }
+
+.filter-tag .filter-tag-li {
+  width: 92%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
+  padding-left: 1rem; }
+
+.filter-tag-li div {
+  background: #ffff;
+  padding: 0.4rem 0.4rem;
+  border-radius: 0.3rem;
+  margin: 0.5rem auto;
+  flex-basis: 10%;
+  flex-shrink: 0;
+  margin-left: 3rem;
+  flex-basis: 3.2rem; }
+
+/* 酒店详细信息 */
+#main-hote-msg {
+  width: 37.5rem;
+  margin: 11rem auto; }
+
+.rcmd-hotel {
+  margin: 2rem auto;
+  background: url(../img/bg-rcmd-hotel.png) no-repeat;
+  background-size: 100%;
+  border: 1px solid #fff;
+  box-sizing: border-box; }
+
+.rcmd-hotel .rcmd-hotel-title {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  padding: 0 0.5rem; }
+
+/* 酒店信息右侧关闭按钮 */
+.ico-close-r {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/icon-close.png) no-repeat;
+  background-size: 100%; }
+
+.hotel-msg {
+  width: 98%;
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.hotel-msg {
+  /* 酒店图片 */
+  /* 酒店价格 */ }
+  .hotel-msg div {
+    font-size: 0.6rem; }
+  .hotel-msg .pic-hotel {
+    width: 30%;
+    margin-left: 0.2rem;
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: center; }
+  .hotel-msg .pic-hotel img {
+    width: 100%;
+    border-radius: 0.2rem; }
+  .hotel-msg .hotel-content {
+    margin: 0.5rem 0 0 0.5rem; }
+  .hotel-msg .hotel-price {
+    margin: 4rem 0 0 4rem;
+    bottom: 1.6rem;
+    color: red;
+    font-size: 0.9rem !important;
+    display: flex;
+    align-items: center; }
+
+/* 酒店评价标题 */
+.hotel-content .review {
+  background-color: #f5f5f5;
+  border-radius: 0.2rem;
+  color: purple;
+  overflow: hidden;
+  width: 80%;
+  padding: 0.2rem 1.5rem 0.2rem 1.8rem;
+  position: relative;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center; }
+.hotel-content span {
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(../img/icon-support.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0.4rem; }
+.hotel-content div:nth-child(1) {
+  font-size: 0.9rem; }
+
+.hotel-price span {
+  color: #ccc;
+  font-size: 0.6rem; }
+
+/* 酒店不存在提示信息 */
+.no-data-msg {
+  text-align: center; }
+
+.no-data-msg .pic-no-data {
+  background: url(../img/pic-no-date.png) no-repeat;
+  width: 100%;
+  background-size: 100% 100%;
+  padding: 10rem 0rem; }
+.no-data-msg .txt-no-data {
+  color: #ccc;
+  margin-top: 1rem; }
+.no-data-msg .btn-find-hotel {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  width: 10.1rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  margin-top: 1rem;
+  background: url(../img/bg-btn.png) no-repeat;
+  background-size: contain;
+  cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */
