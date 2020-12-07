@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>如家酒店</title>
     <!-- <link rel="stylesheet" href="css/-index.css" /> -->
-    <link rel="stylesheet" href="sass/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
     <header>
@@ -36,17 +37,7 @@
                  <!--  隐藏内容/筛选条件--> 
             <div class="sort-list-hide">
                 <div id="sort-distance" class="sort-distance">
-                    <div class="list-cont">
-                        <ul>
-                            <li>排序推荐</li>
-                            <li class="-selected-style">低价优先</li>
-                            <li>高价优先</li>
-                            <li>评价优先</li>
-                            <li>服务优先</li>
-                        </ul>
-                    </div> 
-                    <div class="black-bg"></div>
-                </div> 
+ 
                 
                 <!--  第一个隐藏链表 -->
                 <div id="sort-place" class="sort-place">
@@ -107,7 +98,7 @@
                         <div class="btn-reset">重置</div>
                         <div class="btn-confirm">确认</div>
                     </div>
-                    <div class="black-bg"></div> 
+             
                 </div>
                 
             </div>
@@ -237,16 +228,28 @@
             </div>
         </div>
     </div>
-
-    <!-- <div id="msk">
-        <div class="con1">
-            jsdjfsd 
+    <div id="msk">
+        <div class="sort-list1">1111
+            <div>asadfs
+                <div>asfasfasdjf</div>
+            </div>
         </div>
-    </div> -->
-    <script src="js/index.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js">
+        <div class="sort-list2">2222</div>
+        <div class="sort-list3">333</div>
+        <div class="sort-list34">4444</div>
+        <div class="sort-list3">333</div>
+        <div class="sort-list34">4444</div>
+            
+        </div>
+    </div>
+    <!-- <script src="js/index.js"></script> -->
+    <script>
            $(document).ready(function(){
-               alert("aa");
+                $('#filter-menu div').click(function(){
+                    var i = $(this).index();
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $('#msk').children().eq(i).fadeIn().siblings().fadeOut();
+                })
            });
     </script>
 </body>

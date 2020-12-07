@@ -27,7 +27,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     right: 0;
     left: 0;
     margin:$middle;
-    z-index: 1000;
+    z-index: 10;
     font-size:$font-size;
     background: #fff;
 }
@@ -148,25 +148,32 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 }
 .filter-menu {
     div {
+        min-width: 10%;
         margin-left: 3.5rem;
         cursor: pointer;
-        background: url(../img/ico-arrow-d.png) no-repeat 3.5rem -0.1rem;
+        background: url(../img/ico-arrow-d.png) no-repeat 80% 0;
         padding-right: 2rem;
+        background-size: contain;
     }
     div:hover {
-        margin-left: 3.5rem;
-        background: url(../img/ico-arrow-up.png) no-repeat 3.5rem -0.1rem;
-        padding-right: 2rem;
-        color: darkcyan;
+     
     }
    .active{
         color: darkcyan;/* 默认激活颜色样式 */
         background: url(../img/ico-arrow-d.png) no-repeat 3.5rem -0.2rem;
+        margin-left: 3.5rem;
+        background: url(../img/ico-arrow-up.png) no-repeat 80% 0;
+        padding-right: 2rem;
+        background-size: contain;
+        animation: 1s turn ease;
     }
 
 
 }
- 
+ @keyframes turn {
+     0% {transform: rotateX(0deg);}
+     100%{transform:rotateX(360deg);}
+ }
 
 /* 条件筛选隐藏内容最外层容器 */
 .sort-list-hide {
@@ -178,7 +185,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 /* 距离排序 */
 .sort-distance {
     background: #fff;
-    -display: none;
+   
 }
 .sort-distance {
     .list-cont {
@@ -218,7 +225,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     display: flex;
     flex-wrap: wrap;
     background: #fff;
-    display: none;
+    
 }
 .sort-place {
     .sort-place-detail {
@@ -226,7 +233,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
         background: $sort-place-color;
         text-align: center;
         border-left: 1px solid $sort-place-color;
-        display: none;
+       
     }
 }
 // 位置区域帅选内容
@@ -251,7 +258,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 //  商圈内容容器
 .list-businese-circle {
     background: #fff;
-    display: none;
+   
 }
 //商圈内容
 .list-businese-circle {
@@ -313,7 +320,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 .list-administrative-blok {
     background: #fff;
     border-top: 1px solid $color;
-    display: none;
+   
 }
 
 /* 重置和确认按钮 */
@@ -343,13 +350,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     }
 }
 // 黑色遮罩
-.black-bg {
-    background:rgba(0,0,0,0.5);
-    width: 37.5rem;
-    height: 100vh;
-    margin: 0rem auto;
-    position: fixed;
-}
+
 
 /* 地域标签 */
 .filter-tag {
@@ -523,6 +524,22 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     }
 }
 
+#msk {
+    width: 37.5rem;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    margin:  0 auto;
+    z-index: 999999;
+}
 
 
-
+#msk div{
+    
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+    display: none;
+    top: 0;
+    left: 0;
+    position: absolute; 
+}
