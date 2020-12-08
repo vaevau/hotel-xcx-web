@@ -182,7 +182,7 @@ ul, li, a, img {
   margin: 11rem auto; }
 
 .rcmd-hotel {
-  margin: 2rem auto;
+  margin: 1rem auto;
   background: url(../img/bg-rcmd-hotel.png) no-repeat;
   background-size: 100%;
   border: 1px solid #fff;
@@ -287,7 +287,6 @@ ul, li, a, img {
 #msk {
   width: 37.5rem;
   height: 80%;
-  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
   right: 0;
@@ -295,8 +294,7 @@ ul, li, a, img {
   bottom: 0;
   z-index: 1999;
   overflow: hidden;
-  margin: auto;
-  border-top: 1px solid #f5f5f5; }
+  margin: auto; }
 
 .sort-list1 {
   background: #fff;

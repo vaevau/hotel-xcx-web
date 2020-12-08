@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media.css" />
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/json-data.js"></script>
 </head>
 <body>
     <header>
@@ -34,22 +35,6 @@
                     <div>品牌价格</div>
                     <div>其他筛选</div>
             </div>
-                 <!--  隐藏内容/筛选条件--> 
-            <div class="sort-list-hide">
-                
- 
-                
-                <!--  第一个隐藏链表 -->
-                <div id="sort-place" class="sort-place">
-                    <!-- 第二个隐藏列表-->
-            
- 
-     
-                 
-             
-                </div>
-                
-            </div>
             
             <div class="filter-tag">
                 <div class="filter-tag-li">
@@ -69,86 +54,7 @@
     </header>
 
     <!-- 酒店信息 -->
-    <div id="main-hote-msg">
-        <div class="rcmd-hotel">
-            <div class="rcmd-hotel-title">
-                <p>推荐酒店</p>
-                <div class="ico-close-r"></div>
-                <!-- 此div为右侧关闭图标 -->
-            </div>
-            <div class="hotel-msg">
-                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
-                <div class="hotel-content">
-                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
-                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
-                    <div>距您2km | 虹桥地区</div>
-                </div>
-                <div class="hotel-price">￥302 <span>起</span></div>
-            </div>
-        </div>  
-        <div class="rcmd-hotel">
-            <div class="rcmd-hotel-title">
-                <p>推荐酒店</p>
-                <div class="ico-close-r"></div>
-                <!-- 此div为右侧关闭图标 -->
-            </div>
-            <div class="hotel-msg">
-                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
-                <div class="hotel-content">
-                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
-                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
-                    <div>距您2km | 虹桥地区</div>
-                </div>
-                <div class="hotel-price">￥302 <span>起</span></div>
-            </div>
-        </div>  
-        <div class="rcmd-hotel">
-            <div class="rcmd-hotel-title">
-                <p>推荐酒店</p>
-                <div class="ico-close-r"></div>
-                <!-- 此div为右侧关闭图标 -->
-            </div>
-            <div class="hotel-msg">
-                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
-                <div class="hotel-content">
-                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
-                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
-                    <div>距您2km | 虹桥地区</div>
-                </div>
-                <div class="hotel-price">￥302 <span>起</span></div>
-            </div>
-        </div>          <div class="rcmd-hotel">
-            <div class="rcmd-hotel-title">
-                <p>推荐酒店</p>
-                <div class="ico-close-r"></div>
-                <!-- 此div为右侧关闭图标 -->
-            </div>
-            <div class="hotel-msg">
-                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
-                <div class="hotel-content">
-                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
-                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
-                    <div>距您2km | 虹桥地区</div>
-                </div>
-                <div class="hotel-price">￥302 <span>起</span></div>
-            </div>
-        </div>  
-        <div class="rcmd-hotel">
-            <div class="rcmd-hotel-title">
-                <p>推荐酒店</p>
-                <div class="ico-close-r"></div>
-                <!-- 此div为右侧关闭图标 -->
-            </div>
-            <div class="hotel-msg">
-                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
-                <div class="hotel-content">
-                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
-                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
-                    <div>距您2km | 虹桥地区</div>
-                </div>
-                <div class="hotel-price">￥302 <span>起</span></div>
-            </div>
-        </div>  
+    <div id="main-hote-msg"> 
         <div class="rcmd-hotel">
             <div class="rcmd-hotel-title">
                 <p>推荐酒店</p>
@@ -166,7 +72,24 @@
             </div>
         </div>  
         
-        <div class="no-data-msg">
+        <div class="rcmd-hotel">
+            <div class="rcmd-hotel-title">
+                <p>推荐酒店</p>
+                <div class="ico-close-r"></div>
+                <!-- 此div为右侧关闭图标 -->
+            </div>
+            <div class="hotel-msg">
+                <div  class="pic-hotel"><img src="img/pic-hotel.jpg" alt="#"></div>
+                <div class="hotel-content">
+                    <div>如家精选, 上海虹桥路铁路地区段上海虹桥</div>
+                    <div class="review"> <span></span> 服务周到周到,一句话推荐理由荐理由理由荐理...</div>
+                    <div>距您2km | 虹桥地区</div>
+                </div>
+                <div class="hotel-price">￥302 <span>起</span></div>
+            </div>
+        </div>
+        
+        <!-- <div class="no-data-msg">
             <div class="pic-no-data"></div>
             <div class="txt-no-data">
                 未找到你要的酒店，请更换筛选条件后再试
@@ -174,7 +97,7 @@
             <div class="btn-find-hotel">
                 查看所有酒店
             </div>
-        </div>
+        </div> -->
     </div>
 
 
@@ -262,8 +185,8 @@
       
     <!-- <script src="js/index.js"></script> -->
     <script>
-           $(document).ready(function(){
-                $('#filter-menu').children().click(function(){
+    $(function(){
+        $('#filter-menu').children().click(function(){
                     var i = $(this).index();
                     $(this).addClass('active').siblings().removeClass('active');
                     $('#sort-list-first').children().eq(i).show().siblings().hide();
@@ -289,8 +212,43 @@
                         $('.subway-lines').hide();
                     }
                 })
-       
-           });
+
+            var oHotelData =  hotelMsg.hotelData.map(function(d){
+                var oPicImg = d.picHotel, oPicImg2 = d.picHhotel2,
+                oRcmdHotel = d.rcmdHotel, Odistce = d.distance,
+                oPrice = d.price, oComment = d.comment;
+
+                $(window).scroll(function(){
+
+                    var currentTop = $(document).scrollTop();
+                    var docHeight = $(document).height();
+                    var winHeight = $(window).height();
+                    if(currentTop >= docHeight - winHeight){                  
+               // if($(document).scrollTop() >= $(document).height() - $(window).height()){
+                            var oHotelCont = '';
+                    
+                        
+                        oHotelCont += `<div class="rcmd-hotel">
+            <div class="rcmd-hotel-title">
+                <p>推荐酒店</p>
+                <div class="ico-close-r"></div>
+            </div>
+            <div class="hotel-msg">
+                <div  class="pic-hotel"><img src="${oPicImg2}" alt="#"></div>
+                <div class="hotel-content">
+                    <div>${oRcmdHotel}</div>
+                    <div class="review"> <span></span> ${oComment}</div>
+                    <div>距您${Odistce} | 虹桥地区</div>
+                </div>
+                <div class="hotel-price">￥${oPrice} <span>起</span></div>
+            </div>
+        </div>`;
+               };
+                     $('.rcmd-hotel').append(oHotelCont);
+                });          
+
+            });
+    })
     </script>
 </body>
 </html>

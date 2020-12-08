@@ -238,11 +238,12 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     margin: 11rem auto;
 }
 .rcmd-hotel {
-    margin: 2rem auto;
+    margin: 1rem auto;
     background: url(../img/bg-rcmd-hotel.png) no-repeat;
     background-size:100%;
     border: 1px solid #fff;
     box-sizing: border-box;
+
 }
 .rcmd-hotel {
     .rcmd-hotel-title {
@@ -370,7 +371,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 #msk {
     width: 37.5rem;
     height: 80%;
-    background: rgba(0,0,0,0.5);
+    // background: rgba(0,0,0,0.5);
     position: fixed;
     left: 0;
     right: 0;
@@ -379,7 +380,6 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     z-index: 1999;
     overflow: hidden;
     margin: auto;
-    border-top: 1px solid $color;
 }
 
 
