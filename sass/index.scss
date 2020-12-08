@@ -143,7 +143,7 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
     display: flex;
     justify-content: space-around;
     font-size: 0.9rem;
-    margin: 1rem 0 0 -2rem;
+    margin: 1rem 0 0rem -2.2rem;
     text-align: center;
 }
 .filter-menu {
@@ -154,9 +154,6 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
         background: url(../img/ico-arrow-d.png) no-repeat 80% 0;
         padding-right: 2rem;
         background-size: contain;
-    }
-    div:hover {
-     
     }
    .active{
         color: darkcyan;/* 默认激活颜色样式 */
@@ -176,37 +173,8 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
  }
 
 /* 条件筛选隐藏内容最外层容器 */
-.sort-list-hide {
-    width: 37.5rem;
-    margin: 1rem auto;
-    font-size: 0.7rem;
-    box-sizing: border-box;
-}
-/* 距离排序 */
-.sort-distance {
-    background: #fff;
-   
-}
-.sort-distance {
-    .list-cont {
-        width: 100%;
-        border-top: 1px solid $color;
-        padding-left: 0.8rem;
-        display: flex;
-    }
-    li {
-        width: 100%;
-        padding: 1rem 16.5rem 1rem 0.4rem;
-        border-radius: 0.2rem;
-        cursor: pointer;
-    }
-    li:hover, .selected-style {
-        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 92% 50%;
-        padding: 1rem 16.5rem 1rem 0.4rem;
-        background-size: 6% 66%;
-        color: darkcyan;
-    }
-}
+
+
 
 // 公用选中样式
 .selected-style {
@@ -218,138 +186,13 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 
 
 
-/* 位置区域帅选外层容器 */
-.sort-place {
-    width: 100%;
-    border-top: 1px solid $color;
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    
-}
-.sort-place {
-    .sort-place-detail {
-        width: 25%;
-        background: $sort-place-color;
-        text-align: center;
-        border-left: 1px solid $sort-place-color;
-       
-    }
-}
-// 位置区域帅选内容
-.sort-place-detail {
-    div {
-        padding: 1rem 3.2rem;
-        font-size: $font-size;
-    }
-    div:hover {
-        color:darkcyan;
-        background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
-        background-size: 12% 34%;
-        
-    }
-    .selected-style {
-        background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
-        background-size: 12% 34%;
-    }
-}
-
-
-//  商圈内容容器
-.list-businese-circle {
-    background: #fff;
-   
-}
-//商圈内容
-.list-businese-circle {
-    div {
-        padding: 1rem;
-        width: 24rem
-    }
-    div:hover {
-        padding: 1rem;
-        color: cadetblue;
-        background: none #fff;
-        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 92% 50%;
-    }
-}
-
 /*  地铁线列表外层容器*/
-.content-train-selected {
-    display: flex;
-    width: 74%;
-    margin-top: -0.06rem;
-    justify-content: flex-start;
-    background: #fff;
-    border-top: 1px solid $color;
-}
-.content-train-selected {
-    .list-train {
-        width: 40%;
-        border: none;
-    }
-    .palce-each-train {
-        width: 60%;
-     }
-}
-/*  地铁线列表*/
-.list-train div, .palce-each-train div, .name-administrative div{
-    padding: 1rem 2.2rem;
-    text-align: left;
-    border-radius: 0.2rem;
-}
-
-.list-train {
-    .selected-style, div:hover {
-        background-size: 6%;
-        background-position: 13% 50%;
-    }
-}
 
 
-.palce-each-train {
-    .selected-style,  div:hover {
-        background-size: 8%;
-        color: darkcyan;
-        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 92% 50%;
-        background-size: 8%;
-    }
-}
 
-/* 行政区 */
-.list-administrative-blok {
-    background: #fff;
-    border-top: 1px solid $color;
-   
-}
 
-/* 重置和确认按钮 */
-.btn-reset-confirm {
-    border: 1px solid $color;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 0.5rem 0;
-    color: #fff;
-    padding-right: 0.5rem;
-}
 
-.btn-reset-confirm {
-    .btn-reset {
-        width: 30%;
-        color: #000;
-    }
-    .btn-confirm {
-        width: 70%;
-        height: 2.8rem;
-        line-height: 2.8rem;
-        background: rgb(75, 75, 231);
-        border-radius: 0.2rem;  
-    }
-}
-// 黑色遮罩
+
 
 
 /* 地域标签 */
@@ -526,20 +369,180 @@ $outer-container:".search-top, .filter-menu, .filte-tag, .rcmd-hote, .no-data-ms
 
 #msk {
     width: 37.5rem;
-    height: 100vh;
+    height: 80%;
     background: rgba(0,0,0,0.5);
-    margin:  0 auto;
-    z-index: 999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 11.6rem;
+    bottom: 0;
+    z-index: 1999;
+    overflow: hidden;
+    margin: auto;
+    border-top: 1px solid $color;
 }
 
 
-#msk div{
-    
-    width: 200px;
-    height: 200px;
-    background: #ccc;
+// 1级列表1
+.sort-list1 {
+    background: #fff;
+    width: 100%;
     display: none;
-    top: 0;
-    left: 0;
-    position: absolute; 
+    .list1-content {
+        width: 100%;
+        padding-left: 0.5rem;       
+    }
+    li {
+        padding: 1rem 16.5rem 1rem 0.6rem;
+        border-radius: 0.2rem;
+        cursor: pointer;   
+    }
+
+    li:hover, .selected-style {
+        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 92% 50%;
+        padding: 1rem 16.5rem 1rem 0.6rem;
+        background-size: 6% 66%;
+        color: darkcyan;
+    }
+}
+
+// 1级列表2
+.sort-list2 {
+    width: 100%;
+    background: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: none;
+
+    .sort-place-detail {
+        width: 25%;
+        background: $sort-place-color;
+        border-left: 1px solid $sort-place-color; 
+       
+    }
+    .list-businese-circle {
+        width: 75%;
+        margin: -9.5rem 0 0 9.5rem;
+    }
+}
+// 位置区域帅选内容
+.sort-place-detail {
+    div {
+        padding: 1rem 3.2rem;
+        font-size: $font-size;
+    }
+    .selected-style {
+        background: url(../img/ico-dot.png) #fff no-repeat 14% 50%;
+        background-size: 12% 34%;
+    }
+}
+
+//商圈内容
+.list-businese-circle { 
+    div {
+        padding: 1rem;
+        width: 24rem;   
+    }
+    div:hover {
+        padding: 1rem;
+        color: cadetblue;
+        background: none #fff;
+        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 92% 50%;
+    }
+}
+
+
+
+
+.sort-list-second {
+    width: 37.5rem;
+    .subway-lines {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: nowrap;  
+        margin-left: 9rem;
+        margin-top:-9.6rem;
+        display: none;
+        background: #fff;
+    }
+
+}
+
+.subway-lines {
+    .list-train {
+        width: 30%;
+        border: none;
+        background: $sort-place-color;
+    }
+    .palce-each-train {
+        width: 70%;
+        margin-left: 11rem;
+        margin-top: -30.3rem;
+     }
+}
+/*  地铁线列表*/
+.list-train div, .palce-each-train div, .name-administrative div{
+    padding: 1rem 2.2rem;
+    text-align: left;
+
+}
+
+.list-train {
+
+   
+    .selected-style, div:hover {
+        background-size: 6%;
+        background-position: 13% 50%;
+    }
+}
+
+.palce-each-train {
+    
+    font-size: 0.8rem;
+    .selected-style,  div:hover {
+        background-size: 8%;
+        color: darkcyan;
+        background: url(../img/ico-selected.png) rgb(225, 242, 250) no-repeat 82% 50%;
+        background-size: 8%;
+    }
+}
+
+/* 行政区 */
+.list-administrative-blok {
+    width: 70%;
+    margin-top: -13rem;
+    margin-left: 9.2rem;
+    background: #fff;
+    .name-administrative {
+        display: none;
+    }
+}
+
+
+/* 重置和确认按钮 */
+.btn-reset-confirm {
+    border: 1px solid $color;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: #fff;
+    padding-right: 0.5rem;
+}
+
+.btn-reset-confirm {
+    .btn-reset {
+        width: 30%;
+        color: #000;
+    }
+    .btn-confirm {
+        width: 70%;
+        height: 2.8rem;
+        line-height: 2.8rem;
+        background: rgb(75, 75, 231);
+        border-radius: 0.2rem;  
+    }
 }
